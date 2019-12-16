@@ -1,0 +1,11 @@
+name: ALaUneBlock
+description: 'A La Une Content Block.'
+type: module
+package: Custom
+core: 8.x
+
+dependencies:
+  - block
+  - node
+
+
