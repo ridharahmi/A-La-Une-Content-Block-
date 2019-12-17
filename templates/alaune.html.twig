@@ -10,7 +10,7 @@
         {% endif %}
 
         {% if node.body.summary %}
-            <div class="body>
+            <div class="body">
                 {% set text = node.body.summary|render %}
                 {{ text|length > 200 ? text|slice(0, 200)|raw ~ '...' : text|raw }}
             </div>
