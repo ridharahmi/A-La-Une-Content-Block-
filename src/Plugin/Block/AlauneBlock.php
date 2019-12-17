@@ -119,8 +119,7 @@ class AlauneBlock extends BlockBase
      */
     public function addmoreCallback(array &$form, FormStateInterface $form_state)
     {
-        // The form passed here is the entire form, not the subform that is
-        // passed to non-AJAX callback.
+
         return $form['settings']['items_fieldset'];
     }
 
@@ -156,6 +155,7 @@ class AlauneBlock extends BlockBase
                 }
             }
         }
+
     }
 
 
@@ -165,11 +165,11 @@ class AlauneBlock extends BlockBase
     public function build()
     {
         $nodes = [];
-
         if (isset($this->configuration['content_alaune'])) {
             if (count($this->configuration['content_alaune']) > 0) {
                 $nids = $this->configuration['content_alaune'];
                 $nodes = Node::loadMultiple($nids);
+
             }
         }
 

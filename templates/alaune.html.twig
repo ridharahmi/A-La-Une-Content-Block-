@@ -1,13 +1,16 @@
 {% for node in nodes %}
     <div class="item">
-        <h3 class="mt-0">
-            <a href="{{ path('entity.node.canonical', {'node': node.id}) }}" class="red cochin bold">{{ node.title.value }}</a>
-        </h3>
 
-
+        {% if node.title.value %}
+            <h3 class="title">
+                <a href="{{ path('entity.node.canonical', {'node': node.id}) }}">
+                    {{ node.title.value }}
+                </a>
+            </h3>
+        {% endif %}
 
         {% if node.body.summary %}
-            <div class="excerpt black f22">
+            <div class="body>
                 {% set text = node.body.summary|render %}
                 {{ text|length > 200 ? text|slice(0, 200)|raw ~ '...' : text|raw }}
             </div>

@@ -8,7 +8,7 @@ function ala_une_block_theme($existing, $type, $theme, $path)
     $variables = array(
         'ALaUne' => array(
             'variables' => [
-                'nodes' => NULL,
+                'nodes' => null,
             ],
             'template' => 'alaune',
         ),
